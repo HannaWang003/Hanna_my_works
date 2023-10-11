@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background-image-HW</title>
+    <style>
+      /* element */
+      body {
+        background-image: url(./img/background_07.jpg);
+        background-size: cover;
+        /* background-repeat: no-repeat; */
+        background-attachment: fixed;
+      }
+      table,
+      tr,
+      td {
+        /* border: 1px solid black; */
+      }
+      table {
+        width: 95%;
+        margin: auto;
+        /* background-color: blueviolet; */
+        border-radius: 10px;
+      }
+      td {
+        text-align: center;
+        width: 30%;
+        padding: 30px;
+      }
+      img {
+        width:100%;
+        height: auto;
+        border-radius: 50px;
+        box-shadow: 10px 10px 10px #272727;
+      }
+      a {
+        text-decoration: none;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: black;
+      }
+      a:active {
+        color: rgb(201, 201, 201);
+      }
+      a:hover {
+        font-size: 20px;
+        color: white;
+      }
+h3{
+display:flex;
+justify-content: center;
+align-items: center;
+position:fixed;
+bottom:0;
+right:30px;
+width:80px;
+height:50px;
+}
+      footer {
+        text-align: center;
+        margin: 20px;
+        /* background-color: rgb(164, 166, 190); */
+      }
+      /* width */
+      .w-40 {
+        width: 40%;
+      }
+      .w-60 {
+        width: 60%;
+      }
+      /* div */
+      .container {
+        width: 80vw;
+        /* height: 95vh; */
+        background-color: rgba(0, 0, 0, 0.2);
+        margin: auto;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .nav-td {
+        background-image: radial-gradient(
+          rgba(255, 255, 255, 0.8),
+          rgba(166, 174, 207, 0.5)
+        );
+        border-radius: 20px;
+        height: 5vh;
+        padding: 0px;
+      }
+      .nav-td:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .nav-td > img{
+      width:50px;
+    height:50px;
+  box-shadow: 0 0 0 0;
+  }
+
+      /* attribute */
+      /* text */
+      .text-r {
+        text-align: right;
+      }
+      .text-c {
+        text-align: center;
+      }
+      /* padding */
+      .pd-20 {
+        padding: 20px;
+      }
+      /* display */
+      .d-f {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* background */
+      .bg-1 {
+        background-image: linear-gradient(rgba(233, 227, 175, 0.2), white);
+      }
+      .bg-2 {
+        background-image: linear-gradient(
+          rgb(255, 255, 255, 0.7),
+          rgba(235, 226, 226, 0.3)
+        );
+      }
+      .bg-3 {
+        background-image: radial-gradient(
+          rgb(255, 255, 255, 0.3),
+          rgba(43, 35, 44, 0.4)
+        );
+      }
+      /* border */
+      .bo-1 {
+        border: 5px solid rgba(143, 143, 143, 0.2);
+      }
+      .br-10 {
+        border-radius: 10px;
+      }
+      /* id */
+      #nav-box {
+        display:flex;
+        position:fixed;
+        top:0;
+        width: 80vw;
+        height: 15vh;
+        background-color: rgba(156, 194, 194, 0.3);
+        margin: auto;
+      }
+      #img-box {
+        width: 98%;
+        height: 95vh;
+        /* background-color: blue; */
+        background-image: url(./img/background_08.jpg);
+        background-size: cover;
+        margin: auto;
+        padding-top:20vh;
+      }
+      #audio-box {
+        width: 98%;
+        height: 95vh;
+        /*/+background-color: rgb(95, 95, 119); */
+        background-image: url(./img/background_10.jpg),
+          url(./img/background_09.jpg);
+        background-size: 80%, cover;
+        background-repeat: no-repeat;
+        background-position: right bottom, center center;
+        background-blend-mode: difference;
+        margin: auto;
+        color: rgb(0, 0, 0);
+        padding-top:15vh;
+      }
+
+      #map-box {
+        width: 98%;
+        height: 95vh;
+        background-color: rgba(213, 213, 233, 0.7);
+        margin: auto;
+        padding-top:15vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div id="nav-box">
+        <table>
+          <tr>
+            <td class="nav-td"><a href="#img-box">PICTURE</a></td>
+            <td class="nav-td"><a href="#audio-box">MUSIC</a></td>
+            <td class="nav-td"><a href="#map-box">MAP</a></td>
+          </tr>
+        </table>
+      </div>
+      <div id="img-box" class="d-f">
+        <table>
+          <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Lorem.</td>
+            <td>Lorem ipsum dolor sit amet.</td>
+          </tr>
+          <tr>
+            <td>
+              <img src="./img/background_04.PNG" alt="" />
+            </td>
+            <td>
+              <img src="./img/background_05.PNG" alt="" />
+            </td>
+            <td>
+              <img src="./img/background_06.PNG" alt="" />
+            </td>
+          </tr>
+          <tr>
+            <td class="bg-1 bo-1 br-10"><p>Lorem ipsum dolor sit amet.</p></td>
+            <td class="bg-1 bo-1 br-10">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Sapiente, dicta?
+              </p>
+            </td>
+            <td class="bg-1 bo-1 br-10">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!--輕音樂youtube -->
+      <div id="audio-box" class="d-f">
+        <table>
+          <tr>
+            <td class="w-60">
+              <iframe
+                width="100%"
+                height="600px"
+                src="https://www.youtube.com/embed/VkODCvqzcQQ?si=DiVqjP9M9I3x1ZJl"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </td>
+            <td>
+              <p class="bg-2 pd-20">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloremque neque nulla eius voluptatem tempore cumque sunt omnis
+                quae. Amet minima quam quaerat ducimus exercitationem, ex sint
+                accusamus quidem quibusdam aliquam! Ratione totam, doloribus
+                alias quae velit illo, accusamus nihil voluptatibus nam quasi ea
+                et recusandae corrupti autem optio error maiores! Harum
+                recusandae voluptates amet adipisci! Eum architecto obcaecati
+                natus blanditiis?
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- google map-北美藝術館 -->
+      <div id="map-box" class="d-f">
+        <table class="bg-3">
+          <tr>
+            <td>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28916.59277338722!2d121.51407682051273!3d25.048523859163193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a951fdd9f7f9%3A0x7a40c3880c03a171!2z6Ie65YyX5biC56uL576O6KGT6aSo!5e0!3m2!1szh-TW!2stw!4v1696997466595!5m2!1szh-TW!2stw"
+                width="100%"
+                height="600px"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </td>
+            <td>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+                ducimus delectus ipsum impedit laborum officiis tempore ut
+                nesciunt quam blanditiis, natus vero maxime commodi, dicta ullam
+                laudantium voluptatum numquam officia. Ipsam quasi, at enim
+                voluptas minus dolor? Tempore ea dolores laborum in ad totam rem
+                possimus beatae dolorem quo molestiae quisquam, nihil temporibus
+                consectetur placeat explicabo a cumque aliquam sunt. Quaerat
+                laudantium unde voluptas! Quasi numquam magni amet officiis
+                corporis debitis vero, error voluptatem enim quas, fugiat at. Ex
+                ipsam quos eius distinctio? Obcaecati quo corporis, eligendi eum
+                minus iusto.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h3><a href="#">TOP</a></h3>
+    </div>
+    <footer>&copy HannaWang003 2023-10-11</footer>
+  </body>
+</html>
