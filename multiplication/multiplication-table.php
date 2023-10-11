@@ -1,8 +1,8 @@
 <style>
-    /* element */
-    td {
-        border: 1px solid black;
-    }
+/* element */
+td {
+    border: 1px solid black;
+}
 </style>
 <!-- Level 1_直列示九九乘法-->
 <div class="container">
@@ -42,7 +42,9 @@
 <!--Level 3_表格化-->
 <div class="container">
     <h1>表格化</h1>
-    <?php
+    <table>
+        <tr>
+            <?php
     for ($j = 2; $j < 10; $j++) {
         echo "<td>";
         for ($i = 1; $i < 10; $i++) {
