@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 80vw;
+        height: 100vh;
+        /* background-color: rgb(226, 226, 226); */
+        border: 5px solid gray;
+        margin: auto;
+      }
+      table,
+      tr,
+      th,
+      td {
+        border: 3px solid black;
+        border-collapse: collapse;
+      }
+      table {
+        width: 80vw;
+        margin: auto;
+      }
+      th {
+        height: 20px;
+        background-color: rgb(236, 227, 213);
+      }
+      td {
+        height: 30px;
+      }
+      table tr:nth-child(1) {
+        text-align: center;
+      }
+      tr th:nth-child(1) {
+        width: 10%;
+      }
+      tr th:nth-child(2) {
+        width: 20%;
+      }
+      tr td:nth-child(1) {
+        text-align: center;
+      }
+      tr td:nth-child(3) {
+        text-align: center;
+      }
+      .money {
+        text-align: right;
+      }
+      .money::before {
+        content: "$";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <th>name</th>
+          <th>bonus</th>
+          <th>績效</th>
+          <th>note</th>
+        </tr>
+        <tr>
+          <td>Amy</td>
+          <td class="money">5000</td>
+          <td>60%</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td class="money">6000</td>
+          <td>70%</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Judy</td>
+          <td class="money">1000</td>
+          <td>90%</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
