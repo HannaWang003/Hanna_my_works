@@ -44,7 +44,9 @@ font-family:'Courier New', Courier, monospace;
     <?php
     // 層數
     $n = 9;
-    $type = "*";
+    // 正三角形時，圖形空白格*2/文字*1
+    // line88
+    $type = "🐧";
     ?>
     <div class="container">
         <h2>直角三角形</h2>
@@ -81,7 +83,9 @@ font-family:'Courier New', Courier, monospace;
             <?php
             for($j=1;$j<=$n-1;$j++){
             for($k=1;$k<=$n-$j;$k++){
-               echo "&nbsp;"; 
+                // 用圖形時，2個空白格
+                // 文字，只用一個就可以了
+               echo "&nbsp;&nbsp;"; 
             }
             if($j==1){
                 $l=$j;
