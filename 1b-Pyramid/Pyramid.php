@@ -33,8 +33,9 @@ font-family:'Courier New', Courier, monospace;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2rem;
+            font-size: 2%;
             border-radius: 50px;
+            color:white;
 
         }
     </style>
@@ -43,17 +44,17 @@ font-family:'Courier New', Courier, monospace;
 <body>
     <?php
     // 層數
-    $n = 9;
+    $n = 21;
     // 正三角形時，圖形空白格*2/文字*1
     // line88
-    $type = "🐧";
+    $type = "*";
     ?>
     <div class="container">
         <h2>直角三角形</h2>
         <div class="box">
             <?php
             // 控制層數
-            for ($j = 1; $j <= 9; $j++) {
+            for ($j = 1; $j <= $n; $j++) {
                 for ($i = 1; $i <= $j; $i++) {
                     echo $type;
                 }
@@ -85,13 +86,13 @@ font-family:'Courier New', Courier, monospace;
             for($k=1;$k<=$n-$j;$k++){
                 // 用圖形時，2個空白格
                 // 文字，只用一個就可以了
-               echo "&nbsp;&nbsp;"; 
+               echo "&nbsp;"; 
             }
             if($j==1){
                 $l=$j;
             }
             else{
-                $l=($j-1)*2+1;
+                $l=2*$j-1;
             }
 for($i=1;$i<=$l;$i++){
     echo $type;
@@ -99,6 +100,28 @@ for($i=1;$i<=$l;$i++){
 echo "<br>";
 }
 ?>
+        </div>
+    </div>
+    <div class="container">
+        <h2>倒正三角形</h2>
+        <div class="box">
+            <?php
+            for($j=$n;$j>=1;$j--){
+            for($k=1;$k<=$n-$j;$k++){
+echo "&nbsp;";
+            }
+            if($j==1){
+                $l=$j;
+            }
+            else{
+                $l=2*$j-1;
+            }
+            for($i=1;$i<=$l;$i++){
+echo $type;
+            }
+            echo "<br>";
+        }
+            ?>
         </div>
     </div>
 </body>
