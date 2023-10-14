@@ -81,7 +81,7 @@ font-family:'Courier New', Courier, monospace;
         <h2>正三角形</h2>
         <div class="box">
             <?php
-            for($j=1;$j<=$n-1;$j++){
+            for($j=1;$j<=$n;$j++){
             for($k=1;$k<=$n-$j;$k++){
                 // 用圖形時，2個空白格
                 // 文字，只用一個就可以了
