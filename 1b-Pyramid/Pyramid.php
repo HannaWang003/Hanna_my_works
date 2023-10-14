@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pyramid</title>
     <style>
-        body {}
+        * {
+font-family:'Courier New', Courier, monospace;
+        }
 
         h2 {
             text-align: center;
@@ -42,7 +44,7 @@
     <?php
     // 層數
     $n = 9;
-    $type = "🍋";
+    $type = "*";
     ?>
     <div class="container">
         <h2>直角三角形</h2>
@@ -71,6 +73,28 @@
             }
 
             ?>
+        </div>
+    </div>
+    <div class="container">
+        <h2>正三角形</h2>
+        <div class="box">
+            <?php
+            for($j=1;$j<=$n-1;$j++){
+            for($k=1;$k<=$n-$j;$k++){
+               echo "&nbsp;"; 
+            }
+            if($j==1){
+                $l=$j;
+            }
+            else{
+                $l=($j-1)*2+1;
+            }
+for($i=1;$i<=$l;$i++){
+    echo $type;
+}
+echo "<br>";
+}
+?>
         </div>
     </div>
 </body>
