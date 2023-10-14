@@ -44,7 +44,7 @@ font-family:'Courier New', Courier, monospace;
 <body>
     <?php
     // 層數
-    $n = 21;
+    $n = 13;
     // 正三角形時，圖形空白格*2/文字*1
     // line88
     $type = "*";
@@ -121,6 +121,39 @@ echo $type;
             }
             echo "<br>";
         }
+            ?>
+        </div>
+    </div>
+    <div class="container">
+        <h2>菱形</h2>
+        <div class="box">
+            <?php
+// 控制階層
+for($j=1;$j<=$n;$j++){
+    // 判斷什麼時候要反轉
+    $mid=ceil($n/2);
+    if($j<=$mid){
+$tmp=$j;
+    }
+    else{
+        $tmp--;
+    }
+if($tmp==1){
+    $l=$tmp;
+}
+else{
+    $l=2*$tmp-1;
+}
+// 印空格
+for($k=1;$k<=$n-$tmp;$k++){
+    echo "&nbsp;";
+}
+// 印圖案
+for($i=1;$i<=$l;$i++){
+    echo $type;
+}
+echo "<br>";
+}
             ?>
         </div>
     </div>
