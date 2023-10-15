@@ -18,7 +18,7 @@ font-family:'Courier New', Courier, monospace;
         }
 
         .container {
-            background-image: linear-gradient(45deg, yellow 0%, white 50%, yellow 90%);
+            background-image: linear-gradient(-45deg, orange 50%, black 50%);
             width: 80vw;
             height: 100vh;
             margin: auto;
@@ -29,7 +29,7 @@ font-family:'Courier New', Courier, monospace;
             margin: auto;
             width: 80%;
             height: 80%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(255, 255, 255, 0.2);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,6 +38,51 @@ font-family:'Courier New', Courier, monospace;
             color:white;
 
         }
+        .top{
+            width:5vw;
+            height:50px;
+            position:fixed;
+            right:30px;
+            bottom:30px;
+            background-color:orangered;
+            display:flex;
+            padding:10px;
+            border-radius:5vw 5vw 5vw 5vw;
+            
+        }
+        .top >a{
+            margin:auto;
+            font-size:100%;
+            color:white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration:none;
+
+        }
+        .nav{
+            background-image:linear-gradient(45deg,black 50%,orange 50%);
+            max-width:80vw;
+            margin:auto;
+            display:flex;
+            justify-content:space-around;
+            font-size:1vw;
+            white-space:nowrap;
+            padding:20px;
+            overflow:hidden;
+            text-overflow: ellipsis;
+
+        }
+        nav > a{
+            text-decoration:none;
+            color:black;
+            font-family:'微軟正圓體';
+            font-weight:bolder;
+            background-color:rgba(255,255,255,0.3);
+            padding:15px;
+            border-radius: 30px;
+
+
+        }
+
     </style>
 </head>
 
@@ -50,9 +95,29 @@ font-family:'Courier New', Courier, monospace;
     $type = "*";
     //顏色
     $color = "yellow";
+    $name1="直角三角形";
+    $name2="倒直角三角形";
+    $name3="正三角形";
+    $name4="倒正三角形";
+    $name5="菱形";
+    $name6="矩形";
+    $name7="矩形加對角線";
+    $name8="矩形對角線加顏色";
     ?>
-    <div class="container">
-        <h2>直角三角形</h2>
+    <div class="nav">
+        <nav>
+                   <a href="#T1"><?php echo $name1;?></a>
+                    <a href="#T2"><?php echo $name2;?></a>
+                    <a href="#T3"><?php echo $name3;?></a>
+                    <a href="#T4"><?php echo $name4;?></a>
+                    <a href="#S1"><?php echo $name5;?></a>
+                    <a href="#S2"><?php echo $name6;?></a>
+                    <a href="#S3"><?php echo $name7;?></a>
+                    <a href="#S4"><?php echo $name8;?></a>
+                </nav>
+    </div>
+    <div id="T1" class="container">
+        <h2><?php echo $name1;?></h2>
         <div class="box">
             <?php
             // 控制層數
@@ -66,8 +131,8 @@ font-family:'Courier New', Courier, monospace;
             ?>
         </div>
     </div>
-    <div class="container">
-        <h2>倒直角三角形</h2>
+    <div id="T2" class="container">
+        <h2><?php echo $name2;?></h2>
         <div class="box">
             <?php
             for ($j = $n; $j >= 1; $j--) {
@@ -80,8 +145,8 @@ font-family:'Courier New', Courier, monospace;
             ?>
         </div>
     </div>
-    <div class="container">
-        <h2>正三角形</h2>
+    <div id="T3" class="container">
+        <h2><?php echo $name3;?></h2>
         <div class="box">
             <?php
             for($j=1;$j<=$n;$j++){
@@ -104,8 +169,8 @@ echo "<br>";
 ?>
         </div>
     </div>
-    <div class="container">
-        <h2>倒正三角形</h2>
+    <div id="T4" class="container">
+        <h2><?php echo $name4;?></h2>
         <div class="box">
             <?php
             for($j=$n;$j>=1;$j--){
@@ -126,8 +191,8 @@ echo $type;
             ?>
         </div>
     </div>
-    <div class="container">
-        <h2>菱形</h2>
+    <div id="S1" class="container">
+        <h2><?php echo $name5;?></h2>
         <div class="box">
             <?php
 // 控制階層
@@ -154,8 +219,8 @@ echo "<br>";
             ?>
         </div>
     </div>
-    <div class="container">
-        <h2>矩形</h2>
+    <div id="S2" class="container">
+        <h2><?php echo $name6;?></h2>
         <div class="box">
         <?php
 for($j=1;$j<=$n;$j++){
@@ -173,8 +238,8 @@ echo "<br>";
         ?>
         </div>
     </div>
-    <div class="container">
-        <h2>矩形加對角線</h2>
+    <div id="S3" class="container">
+        <h2><?php echo $name7;?></h2>
         <div class="box">
             <?php
             for($j=1;$j<=$n;$j++)
@@ -197,8 +262,8 @@ echo "<br>";
             ?>
         </div>
     </div>
-    <div class="container">
-        <h2>矩形加對角線(+顏色)</h2>
+    <div id="S4" class="container">
+        <h2><?php echo $name8;?></h2>
         <div class="box">
             <div class="inbox">
         <?php
@@ -222,6 +287,9 @@ for($j=1;$j<=$n;$j++){
         ?>
         </div>
         </div>
+    </div>
+    <div class="top">
+        <a href="#">TOP</a>
     </div>
 </body>
 
