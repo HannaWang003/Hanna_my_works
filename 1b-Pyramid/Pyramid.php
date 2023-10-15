@@ -44,10 +44,12 @@ font-family:'Courier New', Courier, monospace;
 <body>
     <?php
     // 層數
-    $n = 13;
+    $n = 31;
     // 正三角形時，圖形空白格*2/文字*1
     // line88
     $type = "*";
+    //顏色
+    $color = "yellow";
     ?>
     <div class="container">
         <h2>直角三角形</h2>
@@ -138,23 +140,87 @@ $tmp=$j;
     else{
         $tmp--;
     }
-if($tmp==1){
-    $l=$tmp;
-}
-else{
-    $l=2*$tmp-1;
-}
 // 印空格
-for($k=1;$k<=$n-$tmp;$k++){
+for($k=1;$k<=$mid-$tmp;$k++){
     echo "&nbsp;";
 }
 // 印圖案
-for($i=1;$i<=$l;$i++){
+for($i=1;$i<=2*$tmp-1;$i++){
     echo $type;
 }
+
 echo "<br>";
 }
             ?>
+        </div>
+    </div>
+    <div class="container">
+        <h2>矩形</h2>
+        <div class="box">
+        <?php
+for($j=1;$j<=$n;$j++){
+    echo "*";
+for($i=1;$i<=$n-2;$i++){
+    if($j==1 || $j==$n){
+    echo $type;}
+    else{
+        echo "&nbsp;";
+    }
+}
+echo "*";
+echo "<br>";
+}
+        ?>
+        </div>
+    </div>
+    <div class="container">
+        <h2>矩形加對角線</h2>
+        <div class="box">
+            <?php
+            for($j=1;$j<=$n;$j++)
+            {
+                echo $type;
+for($i=1;$i<=$n-2;$i++){
+    if($j==1 || $j==$n){
+    echo $type;
+}
+elseif($i==$j-1 || $i==$n-$j){
+    echo $type;
+}
+else{
+    echo "&nbsp;";
+}
+}
+echo $type;
+echo "<br>";
+}
+            ?>
+        </div>
+    </div>
+    <div class="container">
+        <h2>矩形加對角線(+顏色)</h2>
+        <div class="box">
+            <div class="inbox">
+        <?php
+for($j=1;$j<=$n;$j++){
+    echo $type;
+    for($i=1;$i<=$n-2;$i++){
+        if($j==1 || $j==$n){
+        echo $type;
+    }
+    elseif($i==$j-1 || $i==$n-$j){
+        echo "<span style='color:$color'>$type</span>";
+    }
+    else{
+        echo "&nbsp;";
+    }
+    }
+    echo $type;
+    echo "<br>";
+}
+
+        ?>
+        </div>
         </div>
     </div>
 </body>
